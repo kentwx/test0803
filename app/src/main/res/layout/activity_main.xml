@@ -127,7 +127,12 @@
 
             <Button
                 android:id="@+id/BClear"
-                android:layout_width="180dp"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="修正" />
+            <Button
+                android:id="@+id/BClearAll"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="清除" />
         </LinearLayout>

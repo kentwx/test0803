@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
     //1.宣告物件
     TextView txtShow;
-    Button b00,b01,b02,b03,b04,b05,b06,b07,b08,b09,b10,b11,bClear;
+    Button b00,b01,b02,b03,b04,b05,b06,b07,b08,b09,b10,b11,bClear,bClearAll;
 
 
     @Override
@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
         b10=(Button) this.findViewById(R.id.B10);
         b11=(Button) this.findViewById(R.id.B11);
         bClear=(Button) this.findViewById(R.id.BClear);
+        bClearAll=(Button) this.findViewById(R.id.BClearAll);
         //3.建立事件
         b00.setOnClickListener(new View.OnClickListener(){
 
@@ -143,6 +144,17 @@ public class MainActivity extends Activity {
                 txtShow.setText(S+"#");
             }});
         bClear.setOnClickListener(new Button.OnClickListener(){
+
+
+            @Override
+            public void onClick(View v) {
+                // TODO 自動產生的方法 Stub
+                String S=txtShow.getText().toString();
+                if (S.length()>5){
+                    txtShow.setText(S.substring(0, S.length()-1));
+                }
+            }});
+        bClearAll.setOnClickListener(new Button.OnClickListener(){
 
 
             @Override
