@@ -150,7 +150,7 @@ public class MainActivity extends Activity {
                 // TODO 自動產生的方法 Stub
                 String S=txtShow.getText().toString();
                 if (S.length()>5){
-                    txtShow.setText(S.substring(0, S.length()-1));
+                    txtShow.setText(S.substring(0, S.length()-S.length()+5));
                 }
             }});
     }
